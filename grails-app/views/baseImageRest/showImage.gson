@@ -1,0 +1,15 @@
+json.message {
+    hello "world"
+}
+
+/*import stamp.BaseImage
+
+model {
+    BaseImage baseImage
+}
+
+json {
+    message "Hello !"
+}
+
+*/

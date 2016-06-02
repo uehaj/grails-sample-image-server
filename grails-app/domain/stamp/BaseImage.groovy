@@ -2,7 +2,7 @@ package stamp
 
 import grails.rest.Resource
 
-@Resource
+//@Resource
 class BaseImage {
     byte[] imageContent
 
