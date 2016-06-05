@@ -26,7 +26,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:uploadForm resource="${this.baseImage}" method="PUT">
+            <g:uploadForm resource="${this.baseImage}" method="POST">
                 <g:hiddenField name="version" value="${this.baseImage?.version}" />
                 <fieldset class="form">
                     <f:all bean="baseImage"/>

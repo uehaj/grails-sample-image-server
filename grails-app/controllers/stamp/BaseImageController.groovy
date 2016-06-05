@@ -17,6 +17,13 @@ class BaseImageController {
         respond baseImage
     }
 
+    def showImage(BaseImage baseImage) {
+        response.setContentType("image/png");
+        OutputStream os = response.getOutputStream();
+        os.write(baseImage.imageContent)
+        os.close();
+    }
+
     def create() {
         respond new BaseImage(params)
     }
@@ -52,6 +59,8 @@ class BaseImageController {
 
     @Transactional
     def update(BaseImage baseImage) {
+	    println params
+println "-------------"+baseImage.imageContent[0..20]
         if (baseImage == null) {
             transactionStatus.setRollbackOnly()
             notFound()
