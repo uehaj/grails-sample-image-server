@@ -26,7 +26,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.baseImage}" method="PUT">
+            <g:uploadForm resource="${this.baseImage}" method="PUT">
                 <g:hiddenField name="version" value="${this.baseImage?.version}" />
                 <fieldset class="form">
                     <f:all bean="baseImage"/>
@@ -34,7 +34,7 @@
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
                 </fieldset>
-            </g:form>
+            </g:uploadForm>
         </div>
     </body>
 </html>
